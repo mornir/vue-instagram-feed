@@ -1,0 +1,21 @@
+{
+  "name": "vue-instagram-feed",
+  "version": "1.0.0",
+  "description": "A zero-dependency renderless Vue component to fetch the latest posts from a public Instagram account using the official Instagram API",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/mornir/vue-instagram-feed.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "instagram",
+    "vue-instagram",
+    "instagram-feed"
+  ],
+  "author": "Jérôme Pott",
+  "license": "MIT"
+}
