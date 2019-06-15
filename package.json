@@ -8,7 +8,8 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "version": "npx @pika/pack build"
+    "version": "npx @pika/pack build",
+    "test": "cd playground && yarn test --headless"
   },
   "keywords": [
     "vue",
