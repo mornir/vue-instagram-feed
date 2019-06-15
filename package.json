@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "A zero-dependency renderless Vue component to fetch the latest posts from a public Instagram account using the official Instagram API",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/mornir/vue-instagram-feed.git"
+    "type": "git",
+    "url": "https://github.com/mornir/vue-instagram-feed.git"
   },
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "npx @pika/pack build"
   },
   "keywords": [
     "vue",
@@ -17,5 +18,19 @@
     "instagram-feed"
   ],
   "author": "Jérôme Pott",
-  "license": "MIT"
+  "license": "MIT",
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@pika/plugin-build-web": "^0.4.0",
+    "@pika/plugin-standard-pkg": "^0.4.0"
+  }
 }
