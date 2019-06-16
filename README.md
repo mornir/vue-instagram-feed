@@ -27,29 +27,43 @@ yarn add vue-instagram-feed
 
 ```html
 <script>
-import Vue from "https://unpkg.com/vue/dist/vue.esm.browser.js";
-import VueInstagram from "https://unpkg.com/vue-instagram-feed@2.0.0/dist-src/index.js";
+import Vue from "https://unpkg.com/vue/dist/vue.esm.browser.min.js";
+import VueInstagram from "https://unpkg.com/vue-instagram-feed/dist-src/index.min.js";
 </script>
 ```
 
 ## Example (with CSS Grid)
-Edit the `instagram-feed` id to rezise the images and the gaps:
+See it on codepen: https://codepen.io/mornir0/pen/MMabbw
 
-```css
-#instagram-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-column-gap: 1rem;
-  grid-row-gap: 1.5rem;
-}
+```html
+  <vue-instagram :token="token" :count="9">
+    <template v-slot="{ posts, errorMsg, fetchMorePosts }">
+        <section>
+          <div>
+              <article v-for="post in posts"
+               :key="post.id">
+                <a :href="post.link"
+               target="_blank"
+               rel="noopener">
+                <img :src="post.images.low_resolution.url"
+                     alt="instagram">
+                  </a>
+                <h2 v-if="post.caption">{{ post.caption.text }}</h2>
+                <ul class="tags-list">
+                  <li v-for="tag in post.tags">#{{ tag }}</li>
+                </ul>
+              </article>
+            <pre v-if="errorMsg">{{ errorMsg }}</pre>
+          </div>
+          <div class="text-center">
+            <button class="text-xl border-b-4 border-primary leading-none"
+                    @click="fetchMorePosts">More
+            </button>
+          </div>
+        </section>
+      </template>
+  </vue-instagram>
 ```
-
-<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result" data-user="mornir0" data-slug-hash="MMabbw" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Vue Instagram Feed">
-  <span>See the Pen <a href="https://codepen.io/mornir0/pen/MMabbw/">
-  Vue Instagram Feed</a> by Jérôme Pott (<a href="https://codepen.io/mornir0">@mornir0</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## API
 
