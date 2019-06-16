@@ -8,8 +8,7 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "version": "npx @pika/pack build",
-    "test": "cd playground && yarn test --headless"
+    "version": "npx @pika/pack build"
   },
   "keywords": [
     "vue",
@@ -26,11 +25,16 @@
       ],
       [
         "@pika/plugin-build-web"
+      ],
+      [
+        "pika-plugin-minify"
       ]
     ]
   },
   "devDependencies": {
     "@pika/plugin-build-web": "^0.4.0",
-    "@pika/plugin-standard-pkg": "^0.4.0"
-  }
+    "@pika/plugin-standard-pkg": "^0.4.0",
+    "pika-plugin-minify": "^0.1.0"
+  },
+  "dependencies": {}
 }

@@ -22,7 +22,8 @@
   "dependencies": {},
   "devDependencies": {
     "@pika/plugin-build-web": "^0.4.0",
-    "@pika/plugin-standard-pkg": "^0.4.0"
+    "@pika/plugin-standard-pkg": "^0.4.0",
+    "pika-plugin-minify": "^0.1.0"
   },
   "esnext": "dist-src/index.js",
   "module": "dist-web/index.js"

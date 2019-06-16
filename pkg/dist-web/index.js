@@ -67,6 +67,10 @@ var index = {
         const url = _this.nextURL ? _this.nextURL : "https://api.instagram.com/v1/users/self/media/recent/?access_token=".concat(_this.token, "&count=").concat(_this.count);
 
         try {
+          if (!window.fetch) {
+            throw new Error('This browser does not support the Fetch API natively. A polyfill is needed.');
+          }
+
           const res = yield fetch(url);
 
           if (!res.ok) {

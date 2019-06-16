@@ -28,6 +28,10 @@ export default {
       const url = this.nextURL ? this.nextURL : `https://api.instagram.com/v1/users/self/media/recent/?access_token=${this.token}&count=${this.count}`;
 
       try {
+        if (!window.fetch) {
+          throw new Error('This browser does not support the Fetch API natively. A polyfill is needed.');
+        }
+
         const res = await fetch(url);
 
         if (!res.ok) {
