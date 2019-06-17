@@ -1,4 +1,4 @@
-[![Vue Instagram Feed Version Badge](https://img.shields.io/npm/v/vue-instagram-feed.svg?style=for-the-badge&color=#41b883)](https://www.npmjs.com/package/vue-flip-toolkit)
+[![Vue Instagram Feed Version Badge](https://img.shields.io/npm/v/vue-instagram-feed.svg?style=for-the-badge&color=#41b883)](https://www.npmjs.com/package/vue-instagram-feed)
 
 # Vue Instagram Feed
 
