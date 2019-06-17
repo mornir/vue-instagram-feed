@@ -1,4 +1,4 @@
-[![Vue Instagram Feed Version Badge](https://img.shields.io/npm/v/vue-instagram-feed.svg?style=for-the-badge&color=#41b883)](https://www.npmjs.com/package/vue-instagram-feed) [![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg)](https://dashboard.cypress.io/#/projects/p56aoq/runs)
+[![Vue Instagram Feed Version Badge](https://img.shields.io/npm/v/vue-instagram-feed.svg?style=for-the-badge&color=#41b883)](https://www.npmjs.com/package/vue-instagram-feed) [![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg?style=for-the-badge)](https://dashboard.cypress.io/#/projects/p56aoq/runs)
 
 # Vue Instagram Feed
 
