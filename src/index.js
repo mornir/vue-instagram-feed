@@ -15,6 +15,7 @@ export default {
       posts: [],
       nextURL: '',
       errorMsg: '',
+      areMorePages: false,
     }
   },
   created() {
@@ -40,12 +41,24 @@ export default {
           throw res
         }
         const parsed = await res.json()
+
+        // check for pagination
+        if (Object.entries(parsed.pagination).length === 0) {
+          this.areMorePages = false
+        } else {
+          this.areMorePages = true
+          this.nextURL = parsed.pagination.next_url
+        }
+
+        console.log(parsed)
         this.nextURL = parsed.pagination.next_url
         this.posts.push(...parsed.data)
       } catch (err) {
         if (err.json) {
-          const parsed = await err.json()
-          this.errorMsg = `Error ${400}: ${parsed.meta.error_message}`
+          const {
+            meta: { code, error_type, error_message },
+          } = await err.json()
+          this.errorMsg = `Error ${code} (${error_type}) : ${error_message}`
         } else {
           this.errorMsg = err.message
         }
@@ -58,6 +71,7 @@ export default {
       posts: this.posts,
       errorMsg: this.errorMsg,
       fetchMorePosts: this.fetchPosts,
+      areMorePages: this.areMorePages,
     })
   },
 }
