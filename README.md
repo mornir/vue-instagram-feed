@@ -32,7 +32,7 @@ import VueInstagram from "https://unpkg.com/vue-instagram-feed/dist-src/index.mi
 </script>
 ```
 
-## Example (with CSS Grid)
+## Example
 See it on codepen: https://codepen.io/mornir0/pen/MMabbw
 
 ```html
