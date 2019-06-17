@@ -13,6 +13,7 @@
   "devDependencies": {
     "@vue/cli-plugin-e2e-cypress": "^3.8.0",
     "@vue/cli-service": "^3.8.0",
+    "cypress-vue-unit-test": "^1.11.3",
     "vue-template-compiler": "^2.6.10"
   },
   "postcss": {
