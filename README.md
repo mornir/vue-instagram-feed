@@ -85,7 +85,7 @@ See it on codepen: https://codepen.io/mornir0/pen/MMabbw
 
 ### How to get the token
 
-1. Open this URL in an incognito tab: https://instagram.pixelunion.net/
+1. Open this URL in an **incognito** tab: https://instagram.pixelunion.net/
 2. Click `Generate Access Token` to get the token
 
 Note: The targeted Instagram account must be public and personal. (Business acounts use the Instagram Graph API)
