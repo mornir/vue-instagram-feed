@@ -1,6 +1,6 @@
 {
   "name": "vue-instagram-feed",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A zero-dependency renderless Vue component to fetch the latest posts from a public Instagram account using the official Instagram API",
   "repository": {
     "type": "git",
